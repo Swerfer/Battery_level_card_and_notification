@@ -1,7 +1,7 @@
-slider_cheapest_hours_block:
-  name: Slider cheapest hours block
-  initial: 1
-  min: 1
-  max: 10
-  step: 1
-  unit_of_measurement: 'uur'
+slider_battery_level:
+  name: Slider battery level
+  initial: 10
+  min: 10
+  max: 100
+  step: 5
+  unit_of_measurement: '%'
