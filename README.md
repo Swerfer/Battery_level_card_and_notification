@@ -11,6 +11,8 @@ To use this card, follow the following steps:
 
 •	Create a new empty automation, go in the YAML editor and past the YAML from the automations.yaml file.
 
+•	Change the entity of the service to the notify entity of your choice.
+
 •	Do a quick reload of the YAML configurations (Settings --> Restart Home Assistant --> Quick reload)
 
 •	Go to the dashboard of your choice, add a new manual card and past the YAML from card.yaml in the YAML editor.
