@@ -1,0 +1,15 @@
+alias: Low battery notification
+description: ""
+trigger:
+  - platform: state
+    entity_id:
+      - binary_sensor.low_battery_level
+    from: "off"
+    to: "on"
+condition: []
+action:
+  - service: notify.mobile_app_s20 # Your phone notify entity
+    data:
+      message: Device with battery below 10%
+      title: Home Assistant devices
+mode: single
