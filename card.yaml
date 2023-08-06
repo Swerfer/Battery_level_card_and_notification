@@ -1,0 +1,32 @@
+type: vertical-stack
+cards:
+  - type: entities
+    entities:
+      - entity: input_number.slider_battery_level
+        name: Battery check level
+  - type: custom:auto-entities
+    card:
+      show_header_toggle: false
+      title: Battery low
+      type: entities
+      state_color: true
+    filter:
+      template: |
+        {% set batteries =
+          states.sensor
+            | selectattr('attributes.device_class', 'defined')
+            | rejectattr('state', 'in', ['unavailable', 'unknown', 'none'])
+            | selectattr('attributes.device_class', 'eq', 'battery')
+            | map(attribute='entity_id')
+            | list
+        %}
+        {% for battery in batteries %}
+          {% if states(battery) | int <= states('input_number.slider_battery_level') | int %}
+            {{ battery }}
+          {% endif %}
+        {% endfor %}
+    sort:
+      methode: state
+      numeric: true
+      method: state
+    show_empty: false
