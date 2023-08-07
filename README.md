@@ -5,7 +5,7 @@ This Home Assistant card shows the battery levels below a slider-adjustable perc
 
 ## Prerequisites
 
-•	Auto-entities card
+•	[Auto-entities card](https://github.com/thomasloven/lovelace-auto-entities )
 
 ## How to install
 
