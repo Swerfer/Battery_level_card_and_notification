@@ -3,6 +3,10 @@ This Home Assistant card shows the battery levels below a slider-adjustable perc
 
 ![alt Battery level card and notification](https://github.com/Swerfer/Battery_level_card_and_notification/blob/main/images/battery%20level%20card.png?raw=true)
 
+## Prerequisites
+
+•	Auto-entities card
+
 ## How to install
 
 •	Copy the YAML from binary_sensor.yaml and past it in your binary_sensor.yaml file.
